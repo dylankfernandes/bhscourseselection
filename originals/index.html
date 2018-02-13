@@ -1,0 +1,731 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styleSheet.css" />
+  <link rel="stylesheet" href="mainstyle.css" />
+  <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    #myInput {
+      background-position: 10px 10px;
+      background-repeat: no-repeat;
+      font-size: 16px;
+      padding: 12px 20px 12px 40px;
+      border: 2px solid #ddd;
+      margin-bottom: 12px;
+    }
+
+    #myInput:focus {
+      border-color: #6606A5;
+    }
+
+    #myTable {
+      border-collapse: collapse;
+      width: 100%;
+      border: 1px solid #ddd;
+      font-size: 18px;
+    }
+
+    #myTable th,
+    #myTable td {
+      text-align: left;
+      padding: 12px;
+    }
+
+    #myTable tr {
+      border-bottom: 1px solid #ddd;
+    }
+
+    #myTable tr.leader,
+    #myTable tr:hover {
+      background-color: #6606A5;
+      color: white;
+    }
+
+    .header {
+      background-color: #F1F1F1;
+      padding: 30px;
+      text-align: center;
+      Height: 185px;
+    }
+
+    #navbar {
+      Position: static;
+      Bottom: 0px;
+      Margin: 1px;
+      position: static;
+      overflow: hidden;
+      background-color: #020202;
+    }
+
+    #navbar a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+      width: 20%;
+    }
+
+    #navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    #navbar a.active {
+      background-color: #6606A5;
+      color: white;
+    }
+
+    .content {
+      padding: 16px;
+    }
+
+    input[type=text] {
+      width: 31%;
+      border-radius: 5px;
+      background-color: white;
+      padding: 12px 2opx 12px 40px;
+      -webkit-animation: 0.4s ease-in-out;
+      animation: 0.4s ease-in-out;
+      -webkit-transition: .5s;
+      -moz-transition: .5s;
+      -o-transition: .5s;
+      transition: .5s;
+      box-sizing: border-box;
+    }
+
+    input:focus {
+      width: 100%;
+      color: black;
+      -webkit-transition: .5s;
+      -moz-transition: .5s;
+      -o-transition: .5s;
+      transition: .5s;
+    }
+
+    a {
+      color: #000000;
+      Text-decoration: none;
+    }
+
+    select {
+      margin: 3px;
+      padding: 5px;
+      border: 2px solid grey;
+      border-radius: 4px;
+    }
+
+    select option {
+      background-color: #6606A5;
+      margin: 3px;
+      color: white;
+    }
+  </style>
+</head>
+
+<body style="font-family:Helvetica;">
+
+  <div class="header">
+    <h2>StudentSpot</h2>
+    <p>Thinking about classes? Need help with planning? Welcome to StudentSpot.</p>
+  </div>
+
+  <div id="navbar">
+    <a class="active" href="javascript:void(0)">Home</a>
+    <a href="studentspotcontact.html">Contact</a>
+    <a href="studentspotabout.html">Help</a>
+    <a href="diplomainfo.html">Diploma</a>
+    <!--This may be better as a drop down for Advanced and Standard diploma instead of one page-->
+    <a href="diplomacalculator.html">Calculator</a>
+  </div>
+
+  <div class="content">
+    <h3>StudentSpot</h3>
+    <p>StudentSpot was created to give students help with planning, scheduling, etc. After <strong>Upneet Singh</strong> took a class that he knew little about, he realized an apparent problem. Only other students can really tell you what different classes
+      are like.</p>
+    <p>After realizing this he recruited a team of other students to create a place that student could learn from their peers about classes. After months of progress, the finished product was then named StudentSpot.</p>
+    <p>Find out what classes are like <i>before</i> you take them.</p>
+    <select name="courseType" id="courseID" onchange="updateCourseType()">
+<option value="1">All </option>
+<option value="AFJROTC">AFJROTC </option>
+<option value="Business and CTE">Business and CTE </option>
+<option value="Fine Arts">Fine Arts </option>
+<option value="Gifted Education">Gifted Education </option>
+<option value="Health and Physical Education">Health and Physical Education</option>
+<option value="Information Technology">Information Technology</option>
+<option value="Language Arts">Language Arts</option>
+<option value="Mathematics">Mathematics</option>
+<option value="Performing Arts">Performing Arts</option>
+<option value="SALC">SALC</option>
+<option value="Science">Science</option>
+<option value="Social Studies">Social Studies</option>
+<option value="Special Education">Special Education</option>
+<option value="Student Services">Student Services</option>
+<option value="World Languages">World Languages</option>
+</select> We do not need this as of now
+    <input type="text" id="myInput" onkeyup="search()" placeholder="Search Courses..." title="Type in a name">
+
+
+    <a href="course.html" target="_blank">
+
+      <table id="myTable">
+
+        <tr class="leader whiteText">
+          <th style="width:60%;">Course Name</th>
+          <th style="width:40%;">Subject</th>
+        </tr>
+        <a href="course.html" target="_blank">
+          <tr>
+            <td>Air Force JROTC (Junior Reserve Officers Training Corps)</td>
+            <td>AFJROTC</td>
+          </tr>
+          <tr>
+            <td>Economics and Personal Finance</td>
+            <td>Business and CTE</td>
+          </tr>
+
+          <tr>
+            <td>AP Economics</td>
+            <td>Business and CTE</td>
+          </tr>
+
+          <tr>
+            <td>PRIN Business/Marketing</td>
+            <td>Business and CTE</td>
+          </tr>
+
+          <tr>
+            <td>Business Law</td>
+            <td>Business and CTE</td>
+          </tr>
+
+          <tr>
+            <td>Business Management</td>
+            <td>Business and CTE</td>
+          </tr>
+
+          <tr>
+            <td>Word Processing</td>
+            <td>Business and CTE</td>
+          </tr>
+
+          <tr>
+            <td>Composition of Information Systems</td>
+            <td>Business and CTE</td>
+          </tr>
+
+          <tr>
+            <td>Advanced Composition of Information Systems</td>
+            <td>Business and CTE</td>
+          </tr>
+
+          <tr>
+            <td>Programming</td>
+            <td>Business and CTE</td>
+          </tr>
+
+          <tr>
+            <td>Advanced Programming</td>
+            <td>Business and CTE</td>
+          </tr>
+
+          <tr>
+            <td>Marketing</td>
+            <td>Business and CTE</td>
+          </tr>
+
+          <tr>
+            <td>Advanced Marketing</td>
+            <td>Business and CTE</td>
+          </tr>
+
+          <tr>
+            <td>Sports & Entertainment Marketing</td>
+            <td>Business and CTE</td>
+          </tr>
+
+          <tr>
+            <td>Advanced Sports & Entertainment Marketing</td>
+            <td>Business and CTE</td>
+          </tr>
+
+          <tr>
+            <td>Fashion Marketing</td>
+            <td>Business and CTE</td>
+          </tr>
+
+          <tr>
+            <td>Advanced Fashion Marketing</td>
+            <td>Business and CTE</td>
+          </tr>
+
+          <tr>
+            <td>Entreprenuership</td>
+            <td>Business and CTE</td>
+          </tr>
+
+          <tr>
+            <td>Independant Living</td>
+            <td>Business and CTE</td>
+          </tr>
+
+          <tr>
+            <td>Child Development</td>
+            <td>Business and CTE</td>
+          </tr>
+
+          <tr>
+            <td>Life Planning</td>
+            <td>Business and CTE</td>
+          </tr>
+
+          <tr>
+            <td>Criminal Justice I</td>
+            <td>Business and CTE</td>
+          </tr>
+
+          <tr>
+            <td>Criminal Justice II</td>
+            <td>Business and CTE</td>
+          </tr>
+
+          <tr>
+            <td>Sustainable & Renewable Technology</td>
+            <td>Business and CTE</td>
+          </tr>
+
+          <tr>
+            <td>[course name]</td>
+            <td>Fine Arts</td>
+          </tr>
+          <tr>
+            <td>[course name]</td>
+            <td>Gifted Education</td>
+          </tr>
+          <tr>
+            <td>[course name]</td>
+            <td>Health and Physical Education</td>
+          </tr>
+          <tr>
+            <td>Graphic Design</td>
+            <td>Information Technology</td>
+          </tr>
+
+          <tr>
+            <td>Computer Graphics I</td>
+            <td>Information Technology</td>
+          </tr>
+
+          <tr>
+            <td>Computer Graphics II</td>
+            <td>Information Technology</td>
+          </tr>
+
+          <tr>
+            <td>Computer Graphics III</td>
+            <td>Information Technology</td>
+          </tr>
+
+          <tr>
+            <td>Multimedia Software I</td>
+            <td>Information Technology</td>
+          </tr>
+
+          <tr>
+            <td>Multimedia Software II</td>
+            <td>Information Technology</td>
+          </tr>
+
+          <tr>
+            <td>Photography</td>
+            <td>Information Technology</td>
+          </tr>
+
+          <tr>
+            <td>IT Fundementals</td>
+            <td>Information Technology</td>
+          </tr>
+
+          <tr>
+            <td>Cisco Networking I and II</td>
+            <td>Information Technology</td>
+          </tr>
+
+          <tr>
+            <td>Cisco Networking III and IV</td>
+            <td>Information Technology</td>
+          </tr>
+
+          <tr>
+            <td>Database Design</td>
+            <td>Information Technology</td>
+          </tr>
+
+          <tr>
+            <td>Advanced Database (PL/SQL)</td>
+            <td>Information Technology</td>
+          </tr>
+
+          <tr>
+            <td>Webtech</td>
+            <td>Information Technology</td>
+          </tr>
+
+          <tr>
+            <td>Programming</td>
+            <td>Information Technology</td>
+          </tr>
+
+          <tr>
+            <td>Engineering Exploratory Robotics I</td>
+            <td>Information Technology</td>
+          </tr>
+
+          <tr>
+            <td>Engineering Analytics/Applications Robotics II</td>
+            <td>Information Technology</td>
+          </tr>
+
+          <tr>
+            <td>English 9</td>
+            <td>Language Arts</td>
+          </tr>
+          <tr>
+            <td>Pre-AP English 9</td>
+            <td>Language Arts</td>
+          </tr>
+
+          <tr>
+            <td>English 10</td>
+            <td>Language Arts</td>
+          </tr>
+
+          <tr>
+            <td>Pre-AP English 10</td>
+            <td>Language Arts</td>
+          </tr>
+
+          <tr>
+            <td>English 11</td>
+            <td>Language Arts</td>
+          </tr>
+
+          <tr>
+            <td>AP Language & Comp</td>
+            <td>Language Arts</td>
+          </tr>
+
+          <tr>
+            <td>English 12</td>
+            <td>Language Arts</td>
+          </tr>
+
+          <tr>
+            <td>AP Literature & Comp</td>
+            <td>Language Arts</td>
+          </tr>
+
+          <tr>
+            <td>Creative Writing I</td>
+            <td>Language Arts</td>
+          </tr>
+
+          <tr>
+            <td>Creative Writing II</td>
+            <td>Language Arts</td>
+          </tr>
+
+          <tr>
+            <td>Journalism I</td>
+            <td>Language Arts</td>
+          </tr>
+
+          <tr>
+            <td>Journalism II</td>
+            <td>Language Arts</td>
+          </tr>
+
+          <tr>
+            <td>Journalism III</td>
+            <td>Language Arts</td>
+          </tr>
+
+          <tr>
+            <td>PhotoJournalism & Yearbook</td>
+            <td>Language Arts</td>
+          </tr>
+
+          <tr>
+            <td>Intro to Speech and Communicaions</td>
+            <td>Language Arts</td>
+          </tr>
+
+          <tr>
+            <td>Algebra I PT (Elective)</td>
+            <td>Mathematics</td>
+          </tr>
+          <tr>
+            <td>Algebra I PT II</td>
+            <td>Mathematics</td>
+          </tr>
+
+          <tr>
+            <td>Algebra I</td>
+            <td>Mathematics</td>
+          </tr>
+
+          <tr>
+            <td>Geometry</td>
+            <td>Mathematics</td>
+          </tr>
+
+          <tr>
+            <td>Pre-AP Geometry</td>
+            <td>Mathematics</td>
+          </tr>
+
+          <tr>
+            <td>Algebra, Functions, Data Analysis</td>
+            <td>Mathematics</td>
+          </tr>
+
+          <tr>
+            <td>Algebra II</td>
+            <td>Mathematics</td>
+          </tr>
+
+          <tr>
+            <td>Pre-AP Algebra II/Trigonometry</td>
+            <td>Mathematics</td>
+          </tr>
+
+          <tr>
+            <td>Advanced Math</td>
+            <td>Mathematics</td>
+          </tr>
+
+          <tr>
+            <td>Probability/Statistics & Discrete Math</td>
+            <td>Mathematics</td>
+          </tr>
+
+          <tr>
+            <td>Functions/Trigonometry</td>
+            <td>Mathematics</td>
+          </tr>
+
+          <tr>
+            <td>Functions/Analytic Geometry</td>
+            <td>Mathematics</td>
+          </tr>
+
+          <tr>
+            <td>AP Calculus AB</td>
+            <td>Mathematics</td>
+          </tr>
+
+          <tr>
+            <td>AP Calculus BC</td>
+            <td>Mathematics</td>
+          </tr>
+
+          <tr>
+            <td>AP Statistics</td>
+            <td>Mathematics</td>
+          </tr>
+
+          <tr>
+            <td>Advanced</td>
+            <td>Mathematics</td>
+          </tr>
+
+          <tr>
+            <td>[course name]</td>
+            <td>Performing Arts</td>
+          </tr>
+          <tr>
+            <td>[course name]</td>
+            <td>SALC</td>
+          </tr>
+          <tr>
+            <td>[course name]</td>
+            <td>Science</td>
+          </tr>
+          <tr>
+            <td>World History I</td>
+            <td>Social Studies</td>
+          </tr>
+
+          <tr>
+            <td>Pre-AP World History I</td>
+            <td>Social Studies</td>
+          </tr>
+          <tr>
+            <td>World History II</td>
+            <td>Social Studies</td>
+          </tr>
+          <tr>
+            <td>AP World History</td>
+            <td>Social Studies</td>
+          </tr>
+          <tr>
+            <td>US/VA History</td>
+            <td>Social Studies</td>
+          </tr>
+          <tr>
+            <td>AP US History</td>
+            <td>Social Studies</td>
+          </tr>
+          <tr>
+            <td>US/VA Government</td>
+            <td>Social Studies</td>
+          </tr>
+          <tr>
+            <td>AP US Government</td>
+            <td>Social Studies</td>
+          </tr>
+          <tr>
+            <td>20th Century History</td>
+            <td>Social Studies</td>
+          </tr>
+          <tr>
+            <td>Sociology</td>
+            <td>Social Studies</td>
+          </tr>
+          <tr>
+            <td>Psychology</td>
+            <td>Social Studies</td>
+          </tr>
+          <tr>
+            <td>AP Psychology</td>
+            <td>Social Studies</td>
+          </tr>
+          <tr>
+            <td>[course name]</td>
+            <td>Special Education</td>
+          </tr>
+          <tr>
+            <td>[course name]</td>
+            <td>Student Services</td>
+          </tr>
+          <tr>
+            <td>[course name]</td>
+            <td>World Languages</td>
+          </tr>
+        </a>
+      </table>
+
+  </div>
+  <!—end of content—>
+
+  <script>
+    function setUpPage() {
+      var allClasses = document.getElementsByTagName("tr");
+      var index = 0;
+      for (index = 0; index < allClasses.length; index++) {
+        if (index % 2 == 1) {
+          allClasses[index].style.color = "white";
+          allClasses[index].style.backgroundColor = "darkgrey";
+        } else {
+          allClasses[index].style.color = "white";
+          allClasses[index].style.backgroundColor = "grey";
+        }
+      }
+    }
+
+    function addEventHandlers() {
+      var allClasses = document.getElementsByTagName("tr");
+      for (i = 1; i < allClasses.length; i++) {
+
+
+
+        allClasses[i].addEventListener("mouseover", function() {
+          setCurrentObject(this);
+
+        });
+        allClasses[i].addEventListener("mouseout", function() {
+          resetRow(this);
+
+        });
+
+      }
+    }
+
+    function setCurrentObject(object) {
+      var objectReference = object;
+      var currentObjectCode = objectReference.innerHTML;
+
+      var allClasses = document.getElementsByTagName("tr");
+
+      var index;
+      for (index = 0; index < allClasses.length; index++) {
+        if (allClasses[index].innerHTML === (currentObjectCode)) {
+          break;
+        }
+      }
+      if (index % 2 == 1) {
+        allClasses[index].style.color = "white";
+        allClasses[index].style.backgroundColor = "black";
+      } else {
+        allClasses[index].style.color = "white";
+        allClasses[index].style.backgroundColor = "#6606A5";
+      }
+
+
+    }
+
+    //function to reset table stuff back to default colors
+    function resetRow(object) {
+      var objectReference = object;
+      var currentObjectCode = objectReference.innerHTML;
+
+      var allClasses = document.getElementsByTagName("tr");
+
+      var index;
+      for (index = 0; index < allClasses.length; index++) {
+        if (allClasses[index].innerHTML === (currentObjectCode)) {
+          break;
+        }
+      }
+      allClasses[index].style.backgroundColor = "white";
+      allClasses[index].style.color = "black";
+    }
+
+    function search() {
+      var input, filter, table, tr, td, i;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+  </script>
+  <p class="centerAlign" style="font-family:'Sofia'">"Success is a Choice"</p>
+  <div class="purpleBackground whiteText" style="font-size: 12px; font-family: 'Courier New', Courier, monospace">
+    <p>
+      Updated for the 2017-2018 School Year | Powered by StudentSpot <br />
+      <a href="studentSpotHome.html" class="inverseLink">Return to Home</a> | <a href="studentSpotHelp.html" class="inverseLink">Help</a> |
+      <a href="DiplomaCalculator.html" class="inverseLink">Diploma/Calculator</a>
+    </p>
+
+  </div>
+</body>
+
+</html>

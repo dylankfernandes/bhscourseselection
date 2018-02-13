@@ -1,0 +1,436 @@
+/* Setup Styles */
+
+* {
+  box-sizing: border-box;
+}
+
+.content {
+  padding: 16px;
+}
+
+@media only screen and (max-width:620px) {
+  /* For mobile phones: */
+  .teachers,
+  .students {
+    width: 100%;
+  }
+}
+
+.pageTop-container {
+  padding: 30px;
+  text-align: center;
+  height: 185px;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: center;
+}
+
+/*Here are the large elements*/
+
+html,
+body {}
+
+table {
+  width: 100%;
+}
+
+td {
+  vertical-align: top;
+  width: 50%;
+}
+
+p {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+div {
+  overflow: auto;
+}
+
+table {
+  overflow: auto;
+}
+
+/*Border Styles*/
+
+.borderLess {
+  border: none;
+}
+
+.thickBorder {
+  border: 5px solid;
+}
+
+.mediumBorder {
+  border: 3px solid;
+}
+
+.smallBorder {
+  border: 1px solid;
+}
+
+.highRoundBorder {
+  border-radius: 20px;
+}
+
+.mediumRoundBorder {
+  border-radius: 15px;
+}
+
+.lowRoundBorder {
+  border-radius: 12px;
+}
+
+.redBorder {
+  border-color: red;
+}
+
+.orangeBorder {
+  border-color: orange;
+}
+
+.yellowBorder {
+  border-color: yellow;
+}
+
+.greenBorder {
+  border-color: green;
+}
+
+.blueBorder {
+  border-color: blue;
+}
+
+.purpleBorder {
+  border-color: #6606A5;
+}
+
+.greyBorder {
+  border-color: grey;
+}
+
+.blackBorder {
+  border-color: black;
+}
+
+/*Margin and padding styles*/
+
+.largePadding {
+  padding: 10px;
+}
+
+.mediumPadding {
+  padding: 7px;
+}
+
+.smallPadding {
+  padding: 5px
+}
+
+.largeMargin {
+  margin: 60px;
+}
+
+.mediumMargin {
+  margin: 40px;
+}
+
+.smallMargin {
+  margin: 20px;
+}
+
+.marginLess {
+  margin: 0px;
+}
+
+/*Alignment Styles*/
+
+.leftAlign {
+  text-align: left;
+}
+
+.centerAlign {
+  text-align: center;
+}
+
+.rightAlign {
+  text-align: right;
+}
+
+/*Gradient Styles*/
+
+.radialGreyToBottom {
+  background: -webkit-linear-gradient(bottom, grey, white);
+  background: -o-linear-gradient(bottom, grey, white);
+  background: -moz-linear-gradient(bottom, grey, white);
+  background: -linear-gradient(to bottom, grey, white);
+}
+
+.radialGreyToBottom {
+  background: -webkit-linear-gradient(bottom, grey, white);
+  background: -o-linear-gradient(bottom, grey, white);
+  background: -moz-linear-gradient(bottom, grey, white);
+  background: -linear-gradient(to bottom, grey, white);
+}
+
+.radialGreyToBottom {
+  background: -webkit-linear-gradient(bottom, grey, white);
+  background: -o-linear-gradient(bottom, grey, white);
+  background: -moz-linear-gradient(bottom, grey, white);
+  background: -linear-gradient(to bottom, grey, white);
+}
+
+.radialGreyToBottom {
+  background: -webkit-linear-gradient(bottom, grey, white);
+  background: -o-linear-gradient(bottom, grey, white);
+  background: -moz-linear-gradient(bottom, grey, white);
+  background: -linear-gradient(to bottom, grey, white);
+}
+
+.radialPurpleToBottom {
+  background: -webkit-linear-gradient(bottom, purple, white);
+  background: -o-linear-gradient(bottom, purple, white);
+  background: -moz-linear-gradient(bottom, purple, white);
+  background: -linear-gradient(to bottom, purple, white);
+}
+
+/*Background Styles*/
+
+.whiteBackground {
+  background-color: white
+}
+
+.blackBackground {
+  background-color: black
+}
+
+.redBackground {
+  background-color: red;
+}
+
+.orangeBackground {
+  background-color: orange
+}
+
+.yellowBackground {
+  background-color: yellow
+}
+
+.greenBackground {
+  background-color: green
+}
+
+.blueBackground {
+  background-color: blue
+}
+
+.purpleBackground {
+  background-color: #6606A5;
+}
+
+/*Text Styles*/
+
+.whiteText {
+  color: white;
+}
+
+.blackText {
+  color: black;
+}
+
+/*Link Styles*/
+
+.inverseLink:link,
+.uniqueLinks a:link {
+  color: red;
+}
+
+/* visited link */
+
+.inverseLink:visited,
+.uniqueLinks a:visited {
+  color: green;
+}
+
+/* mouse over link */
+
+.inverseLink:hover,
+.uniqueLinks a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+
+.inverseLink:active,
+.uniqueLinks a:active {
+  color: blue;
+}
+
+.content {
+padding: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Helvetica;
+}
+
+#myInput {
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 2px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myInput:focus {
+  border-color: #6606A5;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th,
+#myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.leader,
+#myTable tr:hover {
+  background-color: #6606A5;
+  color: white;
+}
+
+.header {
+  background-color: #F1F1F1;
+  padding: 30px;
+  text-align: center;
+  height: 185px;
+}
+
+#navbar {
+  Position: static;
+  Bottom: 0px;
+  Margin: 1px;
+  position: static;
+  overflow: hidden;
+  background-color: #020202;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  width: 20%;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: #6606A5;
+  color: white;
+}
+
+.content {
+  padding: 16px;
+}
+
+input[type=text] {
+  width: 31%;
+  border-radius: 5px;
+  background-color: white;
+  padding: 12px 2opx 12px 40px;
+  -webkit-animation: 0.4s ease-in-out;
+  animation: 0.4s ease-in-out;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+  box-sizing: border-box;
+}
+
+input:focus {
+  width: 100%;
+  color: black;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+}
+
+a {
+  color: #000000;
+  Text-decoration: none;
+}
+
+select {
+  margin: 3px;
+  padding: 5px;
+  border: 2px solid grey;
+  border-radius: 4px;
+}
+
+select option {
+  background-color: #6606A5;
+  margin: 3px;
+  color: white;
+}
+
+/* Dylan's added accordion styles */
+
+.table {
+
+}
+
+.table__header {
+  background-color: #6606A5;
+  color: white;
+}
+
+.course__expand {
+  background-color: #ccc;
+  color: #222;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 16px;
+}
+
+.panel {
+  padding: 0px 20px;
+  font-size: 14px;
+  background-color: white;
+  overflow: hidden;
+  display: none;
+  color: #222;
+}
+
+.active {
+  display: block;
+  color: #222;
+}
