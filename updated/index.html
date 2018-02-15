@@ -555,13 +555,11 @@
       var CourseList = React.createClass({
         getInitialState: function() {
           return {
-            courselist: [],
-            data: [],
-            loading: true
+            output: ''
           }
         },
         
-        componentDidMount: function() {
+        componentWillMount: function() {
           var courses, data, output;
           fetch(studentSpreadsheet, { method: 'GET'}).then(function (response) {
             return response.json();
@@ -576,28 +574,20 @@
             
             courses = [...new Set(unfiltered)];
 
-            console.log(courses, data);
-          });
-          
-          this.setState({
-            courselist: courses,
-            data: data
-          }, () => {
-            output = this.state.courselist.map(course => {
-              console.log();
-              
-              var details = this.state.data.filter((array) => array[1] == course);
+            this.state.output = output;
+
+            output = courses.map(course => {
+              var details = data.filter((array) => array[1] == course);
               return <Course details = {details} name = {course}/>
             })
+
+            console.log(courses, data, this.state.output);
           });
 
         },
         
         render: function() {
-          var details;
-          console.log(this.state.courselist, this.state.data);
-          
-          return <h1>{output}</h1>
+          return <div>{this.state.output}</div>
         }
       })
 
