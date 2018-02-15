@@ -404,13 +404,17 @@ select option {
 
 }
 
+.course {
+  border-bottom: 2px solid #222;
+}
+
 .table__header {
   background-color: #6606A5;
   color: white;
 }
 
 .course__expand {
-  background-color: #ccc;
+  background-color: #eee;
   color: #222;
   cursor: pointer;
   padding: 18px;
@@ -419,18 +423,24 @@ select option {
   text-align: left;
   outline: none;
   font-size: 16px;
+  text-transform: uppercase;
+  transition: 0.4s;
+  border-left: 2px solid #222;
+  border-right: 2px solid #222;
 }
 
-.panel {
-  padding: 0px 20px;
-  font-size: 14px;
+.active, .course__expand:hover {
+  background-color: #ddd;
+}
+
+.course__panel {
+  color:#222;
+  padding: 0 18px;
   background-color: white;
+  max-height: 0;
+  font-size: 14px;
   overflow: hidden;
-  display: none;
-  color: #222;
-}
-
-.active {
-  display: block;
-  color: #222;
+  transition: max-height 0.2s ease-out;
+  border-left: 2px solid #222;
+  border-right: 2px solid #222;
 }
