@@ -574,11 +574,13 @@
             
             courses = [...new Set(unfiltered)];
 
-            this.state.output = output;
-
             output = courses.map(course => {
               var details = data.filter((array) => array[1] == course);
               return <Course details = {details} name = {course}/>
+            })
+
+            this.setState({
+              output: output
             })
 
             console.log(courses, data, this.state.output);
